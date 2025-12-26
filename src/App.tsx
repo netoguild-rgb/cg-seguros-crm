@@ -9,6 +9,7 @@ import Apolices from "./pages/Apolices";
 import Pipeline from "./pages/Pipeline";
 import Integracoes from "./pages/Integracoes";
 import Configuracoes from "./pages/Configuracoes";
+import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,6 +21,7 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
+          <Route path="/login" element={<Login />} />
           <Route path="/" element={<Dashboard />} />
           <Route path="/clientes" element={<Clientes />} />
           <Route path="/apolices" element={<Apolices />} />
