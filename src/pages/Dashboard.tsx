@@ -4,6 +4,7 @@ import { PolicyDistributionChart } from '@/components/dashboard/PolicyDistributi
 import { RevenueChart } from '@/components/dashboard/RevenueChart';
 import { RecentActivities } from '@/components/dashboard/RecentActivities';
 import { UpcomingRenewals } from '@/components/dashboard/UpcomingRenewals';
+import { SystemStatus } from '@/components/dashboard/SystemStatus';
 import { mockMetrics, mockApolices, mockAtividades } from '@/lib/mock-data';
 import {
   Users,
@@ -37,6 +38,11 @@ export default function Dashboard() {
       title="Dashboard"
       subtitle="Visão geral do seu negócio"
     >
+      {/* System Status */}
+      <div className="mb-6">
+        <SystemStatus />
+      </div>
+
       {/* Metrics Grid */}
       <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 mb-6">
         <MetricCard
